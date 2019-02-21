@@ -13,7 +13,16 @@ It has been updated for Kamailio 5.0.3 and Zabbix 3.2.  It has also added the we
 
 This repo assumes that the system has Kamailio (5.0.3) installed, sudo, as well as access to the follow CLI utilities: cut, tr, jq, paste, and bc.  Also, this requires Zabbix 3.2.
 ```
-yum install bc jq
+ yum install bc jq -y
+ git clone https://github.com/onnet/zabbix-kazoo-kamailio.git
+ cd zabbix-kazoo-kamailio/etc/
+ cp sudoers.d/zabbix /etc/sudoers.d/
+ cp -r zabbix /etc/
+ chmod +x /etc/zabbix/scripts/kamailio-stats.sh
+ chmod 400 /etc/sudoers.d/zabbix
+ cat /var/log/zabbix/zabbix_agentd.log
+ systemctl restart zabbix-agent
+ cat /var/log/zabbix/zabbix_agentd.log
 ```
 
 ## Portability

@@ -12,6 +12,9 @@ It has been updated for Kamailio 5.0.3 and Zabbix 3.2.  It has also added the we
 ## Requirements
 
 This repo assumes that the system has Kamailio (5.0.3) installed, sudo, as well as access to the follow CLI utilities: cut, tr, jq, paste, and bc.  Also, this requires Zabbix 3.2.
+```
+yum install bc jq
+```
 
 ## Portability
 
